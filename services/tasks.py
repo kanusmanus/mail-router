@@ -32,6 +32,8 @@ def process_email_task(message_id: str) -> bool:
     Geeft True terug bij succes, False bij fout.
     """
     try:
+        time.sleep(5)
+        logger.info("-" * 60)
         return _get_processor().process_message(message_id)
     except Exception as e:
         logger.error(f"Taak mislukt voor message_id {message_id}: {e}", exc_info=True)

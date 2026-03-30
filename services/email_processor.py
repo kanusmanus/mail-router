@@ -77,6 +77,7 @@ class EmailProcessor:
                 message.mark_as_read()
                 logger.debug(f"Body preview: {clean_body(message.body)[:200]}")
 
+            logger.info("-" * 60)
             return success
 
         except Exception as e:
