@@ -1,0 +1,9 @@
+.venv
+o365_token.txt
+__pycache__
+*.pyc
+*.pyo
+.env
+logs/
+.git
+.gitignore

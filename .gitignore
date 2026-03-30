@@ -1,0 +1,5 @@
+.env
+o365_token.txt
+logs/
+.venv/
+__pycache__/
