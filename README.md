@@ -7,7 +7,7 @@ Automatisch e-mail routing systeem voor logistieke bedrijven. Inkomende e-mails 
 ```
 Klant → transport@domein.com
            ↓ (Exchange redirect rule, ingesteld door admin)
-        ai-ifc-in@domein.com  ←  Microsoft Graph webhook
+        ai-in@domein.com  ←  Microsoft Graph webhook
            ↓
         Claude AI classificeert + confidence score
            ↓
@@ -57,7 +57,7 @@ ANTHROPIC_API_KEY=sk-ant-...
 
 # Applicatie
 WEBHOOK_URL=https://mail-router.jouwdomein.nl
-MAILBOX_EMAIL=ai-ifc-in@domein.com        # de beheerde mailbox
+MAILBOX_EMAIL=ai-in@domein.com        # de beheerde mailbox
 SERVICE_ACCOUNT_EMAIL=svc@domein.com
 SERVICE_ACCOUNT_PASSWORD=wachtwoord
 
@@ -183,6 +183,6 @@ mail-router/
 ## Azure AD vereisten
 
 - App registration met **public client flows** ingeschakeld
-- `Mail.ReadWrite` en `Mail.Send` **delegated** permissies
+- `Mail.ReadWrite` en `Mail.Send` permissies
 - Service account met toegang tot de beheerde mailbox
 - Eventueel: `ApplicationAccessPolicy` in Exchange Online om toegang te beperken tot alleen de beheerde mailbox
